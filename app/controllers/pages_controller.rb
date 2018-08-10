@@ -10,6 +10,8 @@ class PagesController < ApplicationController
 
   def greet
     @greeting = "David R Zuluaga"
+    @hello = params[:name]
+    @post = Post.all
   end
 
   def contact
