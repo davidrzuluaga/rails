@@ -13,6 +13,9 @@
     <ul>
       <li><%= link_to 'Hello', greet_url('about_us') %> </li>
     </ul>
+    <% flash.each do |name, msg|%>
+    <%=content_tag :div, msg, class: name%>
+    <%end%>
     <%= yield %>
   </body>
 </html>
